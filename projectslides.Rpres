@@ -1,0 +1,46 @@
+Shiny Application and Reproducible Pitch
+========================================================
+author: Vasant Kumar
+date: September 23, 2001
+autosize: true
+
+Project Deatils
+========================================================
+
+The project consists of two parts
+
+- Creating a shiny app that takes user input and returns some analysis
+- Creating a presentation using slidify package to set of 5 slides describing the app
+- Used swiss dataset as an example of analysis.
+ 
+
+swiss data
+========================================================
+
+```{r}
+plot(swiss$Education, swiss$Fertility)
+```
+
+The App
+========================================================
+
+1. Created a user interface ui.R . 
+
+        - It has a text box, sliders in the sidebar
+        
+        - Main panel displays the models output
+2. Created server.R
+
+        It takes input from ui.R for education level and predicts fertility using 2 models.
+        
+3. Deployed the App
+4. Shared ui.R and server.R code on github.
+
+Notes to the User
+=========================================================
+The App uses swiss data set avaliable in R . It use is very simple and intuitive.
+It models Fertility as a function of education levels.
+Enter education level using the slider.
+click on submit.
+Main panel show the prediction and fit of the two models. also shows the predicted values of the fertility for the two models.
+
